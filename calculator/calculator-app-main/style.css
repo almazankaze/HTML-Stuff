@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  background-color: hsl(222, 26%, 31%);
+}
+
+span {
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.calc-container {
+  padding: 1em;
+  max-width: 500px;
+}
+
+/****** themes ******/
+
+.theme1 {
+  background-color: hsl(222, 26%, 31%);
+  color: white;
+}
+
+.theme1 .numPad {
+  background-color: hsl(223, 31%, 20%);
+}
+
+.theme1 .numPad .grid-container > .btn {
+  color: hsl(221, 14%, 31%);
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0 4px 3px hsl(28, 16%, 65%);
+}
+
+.theme1 .numPad .grid-container > .delBtn {
+  color: white !important;
+  background-color: hsl(225, 21%, 49%) !important;
+  box-shadow: 0 4px 3px hsl(224, 28%, 35%) !important;
+}
+
+.theme1 .numPad .grid-container > .resetBtn {
+  color: white !important;
+  background-color: hsl(225, 21%, 49%) !important;
+  box-shadow: 0 4px 3px hsl(224, 28%, 35%) !important;
+}
+
+.theme1 .numPad .grid-container > .equalsBtn {
+  color: white !important;
+  background-color: hsl(6, 63%, 50%) !important;
+  box-shadow: 0 4px 3px hsl(6, 70%, 34%) !important;
+}
+
+/****** number pad styles ******/
+.numPad {
+  padding: 1em;
+  border-radius: 0.5rem;
+}
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.btn {
+  text-transform: uppercase;
+  margin: 0.375em;
+  padding: 0.375em 0.75em;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.delBtn,
+.resetBtn {
+  padding: 0;
+}
+
+.resetBtn,
+.equalsBtn {
+  grid-column: span 2;
+}
