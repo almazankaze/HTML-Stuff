@@ -25,6 +25,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        margin: 2em 0;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -33,51 +34,64 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="calc-container theme1">
-      <div class="theme-pick">
-        <h3>Calc</h3>
-        <div class="theme-toggle-container">
-          <p>THEME</p>
-          <div class="theme-toggle"></div>
+  <body class="theme3">
+    <div class="container container-narrow">
+      <div class="calc-container">
+        <div class="calc-header">
+          <h3>Calc</h3>
+          <div class="theme-toggle-container">
+            <h3>THEME</h3>
+            <div class="theme-toggle">
+              <div class="input-container">
+                <button class="input-btn">1</button>
+                <button class="input-btn">2</button>
+                <button class="input-btn">3</button>
+              </div>
+              <div class="theme-toggle-display">
+                <div class="circle active"></div>
+                <div class="circle active"></div>
+                <div class="circle active"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="total-display">
+          <h1>0</h1>
+        </div>
+        <div class="numPad">
+          <div class="grid-container">
+            <button class="btn">7</button>
+            <button class="btn">7</button>
+            <button class="btn">7</button>
+            <button class="btn delBtn"><span>DEL</span></button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">+</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">-</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">-</button>
+            <button class="btn">.</button>
+            <button class="btn">0</button>
+            <button class="btn">/</button>
+            <button class="btn">x</button>
+            <button class="btn resetBtn"><span>Reset</span></button>
+            <button class="btn equalsBtn">=</button>
+          </div>
         </div>
       </div>
-      <div class="total-display">
-        <h1>0000</h1>
-      </div>
-      <div class="numPad">
-        <div class="grid-container">
-          <button class="btn">7</button>
-          <button class="btn">7</button>
-          <button class="btn">7</button>
-          <button class="btn delBtn"><span>DEL</span></button>
-          <button class="btn">4</button>
-          <button class="btn">5</button>
-          <button class="btn">6</button>
-          <button class="btn">+</button>
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">-</button>
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">-</button>
-          <button class="btn">.</button>
-          <button class="btn">0</button>
-          <button class="btn">/</button>
-          <button class="btn">x</button>
-          <button class="btn resetBtn"><span>Reset</span></button>
-          <button class="btn equalsBtn">=</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">John Almazan</a>.
+      </div>
     </div>
   </body>
 </html>
