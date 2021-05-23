@@ -21,7 +21,7 @@ body {
 }
 
 span {
-  font-size: 1.375rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -250,8 +250,8 @@ span {
 
 .btn {
   margin: 0.375em;
-  padding: 0.375em 0.75em;
-  font-size: 2rem;
+  padding: 0.125em 0.25em;
+  font-size: 1.25rem;
   letter-spacing: 0.1rem;
   display: inline-block;
   border: none;
@@ -268,4 +268,31 @@ span {
 .resetBtn,
 .equalsBtn {
   grid-column: span 2;
+}
+
+/* Very small Smartphones (portrait) ----------- */
+@media only screen and (max-width: 20em) {
+  .btn {
+    padding: 0.25em 0.5em;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 48em) and (max-device-width: 64em) and (orientation: portrait) {
+}
+
+/* Desktops laptops and iPads----------- */
+@media only screen and (min-width: 48em) {
+  span {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.375em 0.75em;
+    font-size: 1.75rem;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 76.5em) {
 }
