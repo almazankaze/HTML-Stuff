@@ -127,6 +127,10 @@ span {
   background-color: hsl(268, 71%, 12%);
 }
 
+.theme3 .theme-toggle .theme-toggle-display > .circle {
+  background: hsl(176, 100%, 44%);
+}
+
 .theme3 .input-container > .input-btn {
   color: hsl(52, 100%, 62%);
 }

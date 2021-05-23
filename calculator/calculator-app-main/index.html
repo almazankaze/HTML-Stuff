@@ -33,8 +33,11 @@
     </style>
 
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
   </head>
-  <body class="theme3">
+  <body>
     <div class="container container-narrow">
       <div class="calc-container">
         <div class="calc-header">
@@ -48,34 +51,34 @@
                 <button class="input-btn">3</button>
               </div>
               <div class="theme-toggle-display">
-                <div class="circle active"></div>
-                <div class="circle active"></div>
-                <div class="circle active"></div>
+                <div id="1" class="circle"></div>
+                <div id="2" class="circle"></div>
+                <div id="3" class="circle"></div>
               </div>
             </div>
           </div>
         </div>
         <div class="total-display">
-          <h1>0</h1>
+          <h1 id="display-num">0</h1>
         </div>
         <div class="numPad">
           <div class="grid-container">
-            <button class="btn">7</button>
-            <button class="btn">8</button>
-            <button class="btn">9</button>
+            <button class="btn numBtn">7</button>
+            <button class="btn numBtn">8</button>
+            <button class="btn numBtn">9</button>
             <button class="btn delBtn"><span>DEL</span></button>
-            <button class="btn">4</button>
-            <button class="btn">5</button>
-            <button class="btn">6</button>
-            <button class="btn">+</button>
-            <button class="btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button class="btn">-</button>
-            <button class="btn">.</button>
-            <button class="btn">0</button>
-            <button class="btn">/</button>
-            <button class="btn">x</button>
+            <button class="btn numBtn">4</button>
+            <button class="btn numBtn">5</button>
+            <button class="btn numBtn">6</button>
+            <button class="btn symBtn">+</button>
+            <button class="btn numBtn">1</button>
+            <button class="btn numBtn">2</button>
+            <button class="btn numBtn">3</button>
+            <button class="btn symBtn">-</button>
+            <button class="btn symBtn">.</button>
+            <button class="btn numBtn">0</button>
+            <button class="btn symBtn">/</button>
+            <button class="btn symBtn">x</button>
 
             <button class="btn resetBtn"><span>Reset</span></button>
             <button class="btn equalsBtn">=</button>
