@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 0.938rem;
+  color: white;
+  background: hsl(233, 47%, 7%);
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.main {
+  padding: 2em 0;
+}
+
+.card-container {
+  background: hsl(244, 38%, 16%);
+  display: flex;
+  flex-direction: column-reverse;
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.stat-content {
+  padding: 5em;
+  text-align: center;
+}
+
+.highlight {
+  color: hsl(277, 64%, 61%);
+}
+
+.stat-content > p {
+  margin-top: 1.5rem;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.stat {
+  margin-bottom: 2em;
+}
+
+div#myImg {
+  width: 100%;
+  height: 100%;
+  content: url(/images/image-header-mobile.jpg);
+}
+
+/* Very small Smartphones (portrait) ----------- */
+@media only screen and (max-width: 20em) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 48em) and (max-device-width: 64em) and (orientation: portrait) {
+}
+
+/* Desktops laptops and iPads----------- */
+@media only screen and (min-width: 48em) {
+  .main {
+    padding: 4em 4em;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+
+  .split {
+    flex-direction: row;
+    margin-top: 6em;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+
+  .stat {
+    margin-bottom: 0;
+  }
+
+  div#myImg {
+    content: url(/images/image-header-desktop.jpg);
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 76.5em) {
+}
