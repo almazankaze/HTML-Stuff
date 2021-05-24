@@ -3,6 +3,7 @@ let num2 = null;
 let op = null;
 let deciCount = 0;
 let newNum = true;
+let showAnswer = false;
 let isNegative = false;
 let currTheme;
 
@@ -66,26 +67,24 @@ function handleNumKey() {
 
   // change display
   if (!newNum) {
-    $("#display-num").text(display + keyVal);
+    if (display === "-0") $("#display-num").text("-" + keyVal);
+    else $("#display-num").text(display + keyVal);
   } else {
     $("#display-num").text(keyVal);
-
-    if (isNegative) {
-      $("#display-num").text("-" + keyVal);
-      isNegative = false;
-    }
     newNum = false;
   }
 }
 
 // reset everything
 function handleRes() {
+  if (showAnswer) $("#display-num").text(num1);
+  else $("#display-num").text("0");
+
   num1 = null;
   num2 = null;
-  op = null;
   newNum = true;
+  showAnswer = false;
   deciCount = 0;
-  $("#display-num").text("0");
 }
 
 function handleDel() {
@@ -111,11 +110,8 @@ function handleDel() {
 
 function handleEq() {
   doCalc();
-
-  deciCount = 0;
-  num1 = null;
-  num2 = null;
-  newNum = true;
+  showAnswer = true;
+  handleRes();
 }
 
 function handleSym() {
@@ -130,29 +126,34 @@ function handleSym() {
       deciCount = 1;
     }
   } else {
+    // handle negative
+    if (symbol === "-" && newNum) {
+      $("#display-num").text("-0");
+      newNum = false;
+      return;
+    }
+
+    // add a zero if user forgets to after decimal
+    if (display.charAt(display.length - 1) === ".") {
+      $("#display-num").text(display + "0");
+    }
+
     op = symbol;
 
-    // do calculation if user presses op key instead of equals
-    if (num1) {
-      doCalc();
-    } else {
-      num1 = display;
+    doCalc();
 
-      // add a zero if user forgets to after decimal
-      if (display === "0.") {
-        num1 = "0.0";
-        $("#display-num").text("0.0");
-      }
-    }
     deciCount = 0;
     newNum = true;
   }
 }
 
 function doCalc() {
-  num2 = $("#display-num").text();
+  if (!num1) {
+    num1 = $("#display-num").text();
+    return;
+  }
 
-  if (!num1 && !num2) return;
+  num2 = $("#display-num").text();
 
   if (op === "+") {
     num1 = maxDecimals(Number(num1) + Number(num2), 6);
@@ -166,6 +167,7 @@ function doCalc() {
   }
 
   $("#display-num").text(num1);
+  op = null;
 }
 
 function maxDecimals(value, dp) {
