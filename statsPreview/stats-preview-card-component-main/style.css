@@ -35,7 +35,7 @@ p {
   display: flex;
   flex-direction: column-reverse;
   margin-inline: auto;
-  width: min(90%, 70.5rem);
+  width: min(90%, 41rem);
 }
 
 .stat-content {
@@ -61,20 +61,37 @@ p {
   margin-bottom: 2em;
 }
 
+img {
+  content: url(/images/image-header-mobile.jpg);
+}
+
 .myImg {
-  width: 100%;
-  background-image: url(images/image-header-mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .color-image {
+  position: relative;
+}
+
+.color-image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  background-color: hsl(277, 64%, 61%, 0.7);
+  width: 100%;
+  background: hsl(277, 64%, 61%, 0.5);
+  z-index: 999;
 }
 
 /* Very small Smartphones (portrait) ----------- */
-@media only screen and (max-width: 20em) {
+@media only screen and (max-width: 48em) {
+  img {
+    max-width: 100%;
+  }
 }
 
 /* iPads (portrait) ----------- */
@@ -107,10 +124,6 @@ p {
   .stat {
     margin-bottom: 0;
   }
-
-  .myImg {
-    background-image: url(images/image-header-desktop.jpg);
-  }
 }
 
 /* Desktops and laptops ----------- */
@@ -121,5 +134,15 @@ p {
 
   .card-container {
     flex-direction: row;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+
+  img {
+    content: url(/images/image-header-desktop.jpg);
+  }
+
+  .myImg {
+    margin-bottom: 0;
   }
 }
