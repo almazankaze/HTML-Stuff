@@ -68,7 +68,6 @@ img {
 .myImg {
   display: flex;
   flex-flow: nowrap;
-  align-items: center;
   margin-bottom: 2rem;
 }
 
@@ -104,7 +103,7 @@ img {
 /* Desktops laptops and iPads----------- */
 @media only screen and (min-width: 48em) {
   .stat-content {
-    padding: 5em;
+    padding: 5em 4em;
     text-align: center;
   }
 
@@ -136,6 +135,11 @@ img {
     flex-direction: row;
     margin-inline: auto;
     width: min(90%, 70.5rem);
+  }
+
+  .stat-content {
+    padding: 5em 4em 0;
+    text-align: center;
   }
 
   img {
