@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 0.938rem;
+  background: hsl(0, 0%, 95%);
+}
+
+section {
+  padding: 1rem 0;
+}
+
+h2 {
+  color: hsl(0, 0%, 95%);
+  margin-bottom: 2rem;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 4rem;
+}
+
+img {
+  margin-bottom: 2rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 3em;
+}
+
+.sedan {
+  background: hsl(31, 77%, 52%);
+}
+
+.sedan .btn {
+  color: hsl(31, 77%, 52%);
+}
+
+.suv {
+  background: hsl(184, 100%, 22%);
+}
+
+.suv .btn {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background: hsl(179, 100%, 13%);
+}
+
+.luxury .btn {
+  color: hsl(179, 100%, 13%);
+}
+
+.btn {
+  background: hsl(0, 0%, 95%);
+  color: #222;
+  padding: 1em 2em;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+}
+
+/* Very small Smartphones (portrait) ----------- */
+@media only screen and (max-width: 20em) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 48em) and (max-device-width: 64em) and (orientation: portrait) {
+}
+
+/* Desktops laptops and iPads----------- */
+@media only screen and (min-width: 48em) {
+  section {
+    padding: 3rem 0;
+  }
+
+  .columns {
+    flex-direction: row;
+  }
+
+  .columns > * {
+    flex-basis: 100%;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 76.5em) {
+}
