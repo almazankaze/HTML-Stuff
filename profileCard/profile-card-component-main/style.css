@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background: url(/images/bg-pattern-bottom.svg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+hr {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-top: none;
+  border-bottom: 1px solid gray;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 25rem;
+  width: 21.75rem;
+  border-radius: 1rem;
+  margin: 2rem 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+}
+
+.card-bg {
+  position: relative;
+}
+
+.blue-bg {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.circle {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: white;
+  object-fit: cover;
+  text-align: center;
+}
+
+.personal {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 21.75rem;
+  padding-top: 2rem;
+}
+
+.name {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.5em;
+}
+
+.name h1 {
+  margin-right: 0.75em;
+}
+
+.stats {
+  display: flex;
+  width: 21.75rem;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+}
+
+.stats h1 {
+  margin-bottom: 0.25em;
+}
+
+.stats p {
+  font-size: 12px;
+}
