@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 0.938rem;
+  line-height: 1.5;
+  background: red;
+  min-height: 100vh;
+  display: grid;
+  padding: 6.375rem 1.5625rem 5.3125rem 1.5625rem;
+}
+
+.social-card {
+  display: grid;
+  background-color: #fff;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (min-width: 27em) and (max-width: 35em) {
+  .social-card {
+    min-width: 90vw;
+    max-width: 55ch;
+  }
+}
+
+@media screen and (min-width: 35em) and (max-width: 65.625em) {
+  .social-card {
+    min-width: 85vw;
+    max-width: 65ch;
+  }
+}
+
+@media screen and (min-width: 65.625em) {
+  .social-card {
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "info"
+      "users";
+  }
+
+  .social-card-top {
+    background-image: url("/images/bg-pattern-top-desktop.svg");
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info stars";
+    column-gap: 10px;
+  }
+
+  .social-card-info {
+    padding: 6em 6em 0;
+  }
+
+  .social-card-reviews {
+    padding: 6em 0 0;
+  }
+
+  .social-card-bottom {
+    background-image: url("/images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+  }
+
+  .social-card-users {
+    padding: 0 6em 6em;
+  }
+}
