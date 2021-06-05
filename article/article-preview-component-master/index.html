@@ -21,6 +21,9 @@
     <title>Frontend Mentor | Article preview component</title>
 
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
   </head>
   <body>
     <section class="card">
@@ -45,9 +48,34 @@
               <p>28 Jun 2020</p>
             </div>
           </div>
+
           <div class="share-icon">
-            <img src="/images/icon-share.svg" alt="share" />
+            <img class="icon-btn" src="/images/icon-share.svg" alt="share" />
+            <img
+              class="icon-mobile-btn"
+              src="/images/icon-share.svg"
+              alt="share"
+            />
+            <div class="social-box hide">
+              <p class="p-share">Share</p>
+              <img src="/images/icon-facebook.svg" alt="facebook" />
+              <img src="/images/icon-twitter.svg" alt="twitter" />
+              <img src="/images/icon-pinterest.svg" alt="pinterest" />
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="social-box-mobile hide">
+        <p class="p-share">Share</p>
+        <img src="/images/icon-facebook.svg" alt="facebook" />
+        <img src="/images/icon-twitter.svg" alt="twitter" />
+        <img src="/images/icon-pinterest.svg" alt="pinterest" />
+        <div class="share-icon share-mobile">
+          <img
+            class="other-mobile-btn"
+            src="/images/icon-share.svg"
+            alt="share"
+          />
         </div>
       </div>
     </section>

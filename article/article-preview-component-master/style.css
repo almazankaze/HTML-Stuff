@@ -19,7 +19,7 @@ body {
   background: hsl(210, 46%, 95%);
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  color: hsl(214, 17%, 51%);
   justify-content: center;
 }
 
@@ -27,10 +27,15 @@ h1 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: hsl(217, 19%, 35%);
 }
 
 .center {
   text-align: center;
+}
+
+.hide {
+  display: none !important;
 }
 
 .card {
@@ -39,20 +44,24 @@ h1 {
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
-  width: 50vw;
-  max-height: 300px;
+  flex-direction: column;
+  width: 85vw;
+  height: fit-content;
 }
 
 .img-container > img {
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 300px;
   display: block;
   content: url("/images/drawers.jpg");
-  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
 
 .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 2rem 3rem 1rem 2rem;
 }
 
@@ -80,6 +89,7 @@ h1 {
 
 .name {
   font-weight: 700;
+  color: hsl(217, 19%, 35%);
 }
 
 .share-icon {
@@ -92,13 +102,150 @@ h1 {
   background-color: hsl(210, 46%, 95%);
 }
 
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width: 48em) and (max-device-width: 64em) and (orientation: portrait) {
+.icon-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-btn {
+  cursor: pointer;
+  display: block;
+}
+
+.share-mobile {
+  margin-left: 2.5rem;
+}
+
+.social-box-mobile {
+  display: block;
+  width: 85vw;
+  height: 65px;
+  color: hsl(212, 23%, 69%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(217, 19%, 35%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.social-box {
+  color: hsl(212, 23%, 69%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  position: absolute;
+  display: none;
+}
+
+.social-box:before {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: 50px;
+  left: 110px; /* 1px buffer for zooming problems while rendering*/
+  border-width: 15px;
+  transform: rotate(-90deg);
+  border-color: transparent hsl(217, 19%, 35%) transparent transparent;
+  border-style: solid;
+  display: none;
+}
+
+.p-share {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-right: 0.5rem;
+}
+
+.social-box > img {
+  width: 20px;
+  height: 20px;
+  margin: 0 0.5rem;
+}
+
+.social-box-mobile > img {
+  width: 20px;
+  height: 20px;
+  margin: 0 0.5rem;
+}
+
+.other-mobile-btn {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 48em) {
+  body {
+    align-items: center;
+  }
+
   .card {
     width: 90vw;
+    max-height: 300px;
+    flex-direction: row;
+  }
+
+  .img-container > img {
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+  }
+
+  .profile-container {
+    display: flex !important;
+  }
+
+  .social-box {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 200px;
+    height: 50px;
+    bottom: 42%;
+    right: 4%;
+  }
+
+  .social-box-mobile {
+    display: none;
+  }
+
+  .social-box:before {
+    display: block;
+  }
+
+  .icon-btn {
+    display: block;
+  }
+
+  .icon-mobile-btn {
+    cursor: pointer;
+    display: none;
   }
 }
 
-/* Desktops laptops and iPads----------- */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 64em) {
+  .card {
+    width: 70vw;
+  }
+
+  .social-box {
+    width: 250px;
+    bottom: 45%;
+    right: 9%;
+  }
+}
+
+@media only screen and (min-width: 87.5em) {
+  .card {
+    width: 50vw;
+  }
+
+  .social-box {
+    width: 250px;
+    bottom: 41%;
+    right: 21%;
+  }
 }
