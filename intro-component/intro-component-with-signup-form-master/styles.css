@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-image: url("images/bg-intro-desktop.png");
+  background-blend-mode: screen;
+  background-color: hsl(0, 100%, 74%);
+  height: 100vh;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  border: 0;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 40px;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.info-section {
+  text-align: center;
+  margin: 4rem 1rem;
+}
+
+.desc {
+  font-size: 1em;
+}
+
+.title {
+  margin-bottom: 1.75rem;
+}
+
+.color-container {
+  width: 100%;
+  background-color: hsl(248, 32%, 49%);
+  text-align: center;
+  padding: 1em 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+.form-section {
+  margin: 1rem;
+  padding-bottom: 4rem;
+}
+
+.try-it {
+  font-size: 0.9rem;
+  color: hsl(246, 25%, 77%);
+}
+
+.try-it span {
+  color: white;
+}
+
+.form-container {
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.myInput {
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  outline-color: hsl(249, 10%, 26%);
+  padding: 1em 1.25em;
+  width: 100%;
+}
+
+.input-container:first-child {
+  margin-top: 0;
+}
+
+.error-message {
+  display: none;
+  color: hsl(0, 100%, 74%);
+  font-size: 0.8rem;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  color: white;
+  border-radius: 5px;
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.terms {
+  text-align: center;
+  color: hsl(246, 25%, 77%);
+  font-size: 0.75rem;
+}
+
+a {
+  color: hsl(0, 100%, 74%);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1300px) {
+  h1 {
+    font-size: 3em;
+    line-height: 48px;
+  }
+
+  .desc {
+    font-size: 1.125em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .info-section {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 8rem;
+    text-align: left;
+  }
+
+  .title {
+    width: 450px;
+  }
+
+  .form-section {
+    grid-column: 2;
+    margin: 0;
+    padding-bottom: 0;
+    margin-top: 4rem;
+    margin-right: 10rem;
+  }
+}
