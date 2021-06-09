@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+}
+
+.align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem;
+  height: 100%;
+}
+
+.align-center {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  height: 100%;
+}
+
+.join {
+  width: 100%;
+}
+
+.green-text {
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+.yellow-text {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.desc {
+  color: hsl(218, 22%, 67%);
+  font-size: 1.25rem;
+}
+
+.monthly {
+  width: 100%;
+  background-color: hsl(179, 62%, 43%);
+}
+
+.per-month {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dollar-amount {
+  font-size: 2.5rem;
+}
+
+.dark-text {
+  color: hsl(204, 43%, 93%);
+  margin-left: 1rem;
+}
+
+.btn {
+  width: 100%;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  border-radius: 10px;
+  padding: 1.25em;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.why {
+  width: 100%;
+  background-color: hsl(179, 62%, 43%);
+  opacity: 85%;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  color: hsl(204, 43%, 93%);
+}
+
+@media screen and (min-width: 768px) {
+  .align-center {
+    padding: 4rem 0;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+  }
+
+  .align {
+    padding-left: 4rem;
+  }
+
+  .join {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .join-text {
+    width: 60%;
+  }
+
+  .green-text {
+    font-size: 2rem;
+  }
+
+  .yellow-text {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    font-size: 1.5rem;
+  }
+
+  .monthly {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .why {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
