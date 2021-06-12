@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
 
-  We are launching soon!
+    <title>Frontend Mentor | Ping coming soon page</title>
 
-  Subscribe and get notified
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
 
-  Notify Me
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img class="logo" src="/images/logo.svg" alt="logo" />
+        <h1>We are launching <span class="bold">soon!</span></h1>
+        <h3>Subscribe and get notified</h3>
+      </header>
+      <div class="notify-container">
+        <div class="input-container">
+          <input
+            class="myInput"
+            type="text"
+            placeholder="Your email address..."
+          />
+          <span class="error-message"
+            >Please provide a valid email address</span
+          >
+        </div>
+        <button class="btn">Notify Me</button>
+      </div>
+      <img
+        class="dashboard"
+        src="/images/illustration-dashboard.png"
+        alt="dashboard"
+      />
+      <footer>
+        <div class="social-icons">
+          <div class="icon"><i class="fa fa-facebook"></i></div>
+          <div class="icon"><i class="fa fa-twitter"></i></div>
+          <div class="icon"><i class="fa fa-instagram"></i></div>
+        </div>
 
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+        <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
+      </footer>
+    </div>
+  </body>
 </html>
