@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", "Fraunces", sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  border: 0;
+  max-width: 100%;
+}
+
+/***** Nav *****/
+nav {
+  background: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  margin: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  padding: 0.625em 1.25em;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background: hsl(210, 4%, 67%);
+  border-radius: 20px;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.checkBtn {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 48rem) {
+  nav {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    margin: 2rem;
+  }
+
+  .checkBtn {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    width: 90vw;
+    height: 30vh;
+    background: white;
+    top: 3.5rem;
+    left: -100%;
+    transition: left 0.3s linear;
+  }
+
+  .nav-link {
+    width: fit-content;
+    margin: 0.5rem 0;
+  }
+
+  .nav-link:hover {
+    background: hsl(51, 100%, 49%);
+    color: black;
+  }
+
+  .nav-link a {
+    color: hsl(232, 10%, 55%);
+  }
+
+  .nav-link:hover a {
+    color: black;
+  }
+
+  .checkBtn {
+    font-size: 1.5rem;
+    color: hsl(210, 4%, 67%);
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+}
