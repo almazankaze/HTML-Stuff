@@ -4,8 +4,8 @@ $(document).ready(function () {
 
 function handleClick() {
   if ($(this).is(":checked")) {
-    $(".nav-links").css("left", "0");
+    $(".nav-links-container").css("left", "0%");
   } else {
-    $(".nav-links").css("left", "-100%");
+    $(".nav-links-container").css("left", "-100%");
   }
 }
